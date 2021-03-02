@@ -12,7 +12,7 @@
     </tr>
     </thead>
     <tbody>
-        @foreach ($transactions as $transaction)
+        @foreach ($transactions->reverse() as $transaction)
             <tr>
                 <td>{{$transaction->created_at}}</td>
                 <td>{{$transaction->title}}</td>

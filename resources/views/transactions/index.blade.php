@@ -12,7 +12,7 @@
         </tr>
         </thead>
         <tbody>
-            @foreach ($transactions as $transaction)
+            @foreach ($transactions->reverse() as $transaction)
             @if($transaction->SRC == Auth::user()->id )
             <tr>
                 <td>{{$transaction->created_at}}</td>
