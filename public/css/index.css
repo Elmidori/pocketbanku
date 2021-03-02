@@ -1,0 +1,203 @@
+body{
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    font-family: "Open Sans", sans-serif;
+    overflow: hidden;
+}
+.header1{
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.header1 #logo1{
+    height: 200px;
+    position: absolute;
+    justify-self: center   ;
+    transform: scale(0.6);
+}
+ul{
+    align-self: flex-end;
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 30px;
+    list-style: none;
+}
+
+ul li a{ 
+    margin:20px 30px;
+    text-decoration: none;
+    color: #646464;
+    font-weight: 500;
+    padding: 10px;
+}
+
+#sign{
+    border: 5px solid rgb(255, 115, 0);
+    
+}
+#sign:hover{
+    transition: ease 0.2s;
+    background-color: rgb(255, 115, 0);
+    transform: translateY(2px);
+    filter: drop-shadow(0 0 5px rgb(255, 159, 80));
+    color: white;
+}
+
+.circle{
+    border: 80px solid  rgb(255, 115, 0);
+    height: 30vw;
+    width:30vw;
+    position: absolute;
+    border-radius: 99999px;
+    transform: translateX(-18vw);
+    z-index: -3;
+    filter: drop-shadow(5px 5px 5px rgba(77, 77, 77, 0.219));
+}
+.circle img{
+    border-radius: 99999px;
+    opacity: 0.05;
+    position: absolute;
+    filter: blur(2px);
+    left: 75vw ;
+}
+
+
+#horse{
+    height: 30vw;
+    filter: drop-shadow(5px 5px 5px rgba(77, 77, 77, 0.219));
+    transform: scaleX(-1) translateX(100px);
+    position: absolute;
+    z-index: -2;
+}
+
+.hero p{
+    transform: translate(33vw,10vh);
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #646464;
+}
+#BP{
+    color: rgb(255, 115, 0);
+    
+    filter: drop-shadow(0 0 5px rgba(255, 159, 80, 0.61));
+    font-size: 2.5rem;
+
+}
+
+.hero .btn{
+    font-size: 24px;
+    font-weight: 700;
+    color: #fff;
+    position: absolute;
+    left: 40vw;
+    bottom:20vh;
+    text-decoration: none;
+    background-image: linear-gradient(to bottom right, rgb(255, 115, 0), rgb(248, 151, 71));
+    filter: drop-shadow(5px 5px 5px rgba(77, 77, 77, 0.219));
+    padding: 20px 40px;
+    border-radius: 90px;
+}
+.btn:hover{
+    transform: scale(1.05);
+    transition: ease 0.2s;
+    background-image: linear-gradient(to top left, rgb(255, 115, 0), rgb(248, 151, 71));
+    
+}
+
+
+
+.box {
+	display: flex;
+	background-color: white;
+	align-items: center;
+	justify-content: center;
+    
+    background-image: linear-gradient(to top left, rgb(255, 115, 0), rgb(248, 151, 71));
+  	height: 100vh;
+}
+.login-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  	width: 25vw;
+	border-radius: 24px;
+	padding: 15px;
+	background-color: white;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.login-form img{
+    height: 20vh;
+    margin-bottom: -8vh;
+}
+.login-form h1 {
+	font-size: 2.5rem;
+}
+.login-form input[type = "text"] {
+    margin-top: 10px;
+}
+.login-form input[type = "password"] {
+	margin-top: 10px;
+}
+input {
+  outline: none;
+ }
+.links {
+    width: 90%;
+	margin-top: 20px;
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+}
+.links > a:first-of-type {
+	margin-right: 5px;
+}
+.links > a {	
+	background-color: #E0E0E0;
+	border-radius: 24px;
+	font-weight: 400;
+	color: black;
+	flex: 1;
+	text-align: center;
+	padding: 10px;
+	text-decoration: none;
+	transition: 0.25s;
+}
+.links > a:hover {	
+	opacity: 0.6;
+}
+.login-form input[type = "submit"] {
+	background-color:  #E0E0E0;
+    
+    background-image: linear-gradient(to top left, rgb(255, 115, 0), rgb(248, 151, 71));
+	width: 50%;
+	color: white;
+  	border: none;
+    width: 50%;
+	margin-top: 35px;
+  	cursor: pointer;
+	padding: 10px;
+  	font-size: 1.3rem;
+	font-weight: bold;
+	border-radius: 24px;
+	transition: 0.25s;
+}
+.login-form input[type = "submit"]:hover {
+	opacity: 0.8;
+}
+.login-form input[type = "text"]:focus, .login-form input[type = "password"]:focus {
+ 	border: 2px rgb(255, 115, 0) solid;
+ }
+.login-form input[type = "text"], .login-form input[type = "password"] {
+	width: 90%;
+	border: none;
+	border-radius: 24px;
+  	font-size: 1rem;
+	background-color: gainsboro;
+	padding: 15px;
+} 
