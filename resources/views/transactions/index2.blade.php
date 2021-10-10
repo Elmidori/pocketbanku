@@ -18,7 +18,7 @@
                 <td>{{$transaction->title}}</td>
                 <td>{{$transaction->SRC}}</td>
                 <td>{{$transaction->DEST}}</td>
-                <td><b>{{$transaction->montantt}}</b></td>
+                <td><b>{{$transaction->montant}}</b></td>
                 <td>{{$transaction->SoldeR}}</td>
             </tr>
         @endforeach

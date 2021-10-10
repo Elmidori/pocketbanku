@@ -50,19 +50,19 @@ class transactionController extends Controller
     {
         $transaction = new transaction;
         $transaction->title = $request->input('libelle');
-        $transaction->montantt = $request->input('montant');
+        $transaction->montant = $request->input('montant');
         $transaction->DEST = $request->input('beneficiaire');
         $transaction->SRC = auth()->user()->id;
-        $transaction->SoldeR = auth()->user()->solde -  $transaction->montantt;
+        $transaction->SoldeR = auth()->user()->solde -  $transaction->montant;
         $transaction->save();
         
         $src=Auth::user();
-        $src->solde -= $transaction->montantt;
+        $src->solde -= $transaction->montant;
         $src->save();
 
         DB::table('users')
             ->where('id', $transaction->DEST )
-            ->increment('solde', $transaction->montantt);
+            ->increment('solde', $transaction->montant);
 
 
         return redirect('/home');
@@ -73,11 +73,11 @@ class transactionController extends Controller
         $transaction = new transaction;
         $transaction->title = "Depot";
         $transaction->DEST = $request->input('beneficiaire');
-        $transaction->SRC = NULL;
-        $transaction->montantt = $request->input('montant'); 
+        $transaction->SRC = 0;
+        $transaction->montant = $request->input('montant'); 
         DB::table('users')
             ->where('id', $transaction->DEST )
-            ->increment('solde', $transaction->montantt);
+            ->increment('solde', $transaction->montant);
         $transaction->SoldeR = DB::table('users')->where('id', $transaction->DEST)->value('solde');
                                     
         $transaction->save();

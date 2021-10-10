@@ -16,8 +16,8 @@ class CreateTransactionsTable extends Migration
         Schema::create('transactions', function (Blueprint $table) {
             $table->increments('id');
             $table->mediumText('title');
-            $table->int('SRC');
-            $table->int('DEST');
+            $table->integer('SRC');
+            $table->integer('DEST');
             $table->float('montant');
             $table->float('SoldeR');
             $table->timestamps();
