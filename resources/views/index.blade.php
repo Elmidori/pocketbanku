@@ -3,7 +3,7 @@
     <title>Pocket Bank | Homepage</title>
     
     <link rel="icon" href=" {{asset('img/icon.png')}}">
-    <link rel="stylesheet" href="{{ asset('css\index.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/index.css') }}">
 </head>
 <body>
     @if (Auth::guest())
