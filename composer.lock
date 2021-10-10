@@ -4178,7 +4178,7 @@
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
-        "php": "7.2.18"
+        "php": "7.3.24"
     },
     "platform-dev": [],
     "plugin-api-version": "2.0.0"
